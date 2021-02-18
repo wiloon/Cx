@@ -1,0 +1,7 @@
+#include <stdio.h>
+#define FOO "hello c"
+int main()
+{
+  printf(FOO);
+  return 0;
+}
