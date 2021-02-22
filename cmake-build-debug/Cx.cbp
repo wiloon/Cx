@@ -5,7 +5,7 @@
 		<Option title="Cx"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\foo\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/wiloon/projects/Cx/cmake-build-debug"/>
@@ -75,12 +75,56 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wiloon/projects/Cx/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="foo">
+				<Option output="/home/wiloon/projects/Cx/cmake-build-debug/foo/foo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wiloon/projects/Cx/cmake-build-debug/foo"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wiloon/projects/Cx/cmake-build-debug/foo/Makefile&quot;  VERBOSE=1 foo"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wiloon/projects/Cx/cmake-build-debug/foo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wiloon/projects/Cx/cmake-build-debug/foo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wiloon/projects/Cx/cmake-build-debug/foo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="foo/fast">
+				<Option output="/home/wiloon/projects/Cx/cmake-build-debug/foo/foo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wiloon/projects/Cx/cmake-build-debug/foo"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wiloon/projects/Cx/cmake-build-debug/foo/Makefile&quot;  VERBOSE=1 foo/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wiloon/projects/Cx/cmake-build-debug/foo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wiloon/projects/Cx/cmake-build-debug/foo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wiloon/projects/Cx/cmake-build-debug/foo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="/home/wiloon/projects/Cx/foo/main.c">
+			<Option target="foo"/>
+		</Unit>
 		<Unit filename="/home/wiloon/projects/Cx/main.c">
 			<Option target="Cx"/>
 		</Unit>
 		<Unit filename="/home/wiloon/projects/Cx/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/wiloon/projects/Cx/foo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\foo\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

@@ -10,6 +10,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../CMakeLists.txt"
   "CMakeFiles/3.17.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.17.3/CMakeSystem.cmake"
+  "../foo/CMakeLists.txt"
   "/usr/share/cmake-3.17/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.17/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "/usr/share/cmake-3.17/Modules/CMakeCommonLanguageInclude.cmake"
@@ -21,8 +22,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.17/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.17/Modules/CMakeSystemSpecificInitialize.cmake"
   "/usr/share/cmake-3.17/Modules/CheckCSourceCompiles.cmake"
-  "/usr/share/cmake-3.17/Modules/CheckForPthreads.c"
-  "/usr/share/cmake-3.17/Modules/CheckIncludeFile.c.in"
   "/usr/share/cmake-3.17/Modules/CheckIncludeFile.cmake"
   "/usr/share/cmake-3.17/Modules/CheckLibraryExists.cmake"
   "/usr/share/cmake-3.17/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
@@ -48,9 +47,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "foo/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Cx.dir/DependInfo.cmake"
+  "foo/CMakeFiles/foo.dir/DependInfo.cmake"
   )

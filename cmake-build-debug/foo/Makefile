@@ -100,14 +100,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wiloon/projects/Cx/cmake-build-debug/CMakeFiles /home/wiloon/projects/Cx/cmake-build-debug/CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/wiloon/projects/Cx/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/wiloon/projects/Cx/cmake-build-debug/CMakeFiles /home/wiloon/projects/Cx/cmake-build-debug/foo/CMakeFiles/progress.marks
+	cd /home/wiloon/projects/Cx/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 foo/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wiloon/projects/Cx/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/wiloon/projects/Cx/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 foo/clean
 .PHONY : clean
 
 # The main clean target
@@ -117,43 +117,32 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/wiloon/projects/Cx/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 foo/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/wiloon/projects/Cx/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 foo/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/wiloon/projects/Cx/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named Cx
+# Convenience name for target.
+foo/CMakeFiles/foo.dir/rule:
+	cd /home/wiloon/projects/Cx/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 foo/CMakeFiles/foo.dir/rule
+.PHONY : foo/CMakeFiles/foo.dir/rule
 
-# Build rule for target.
-Cx: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Cx
-.PHONY : Cx
+# Convenience name for target.
+foo: foo/CMakeFiles/foo.dir/rule
 
-# fast build rule for target.
-Cx/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cx.dir/build.make CMakeFiles/Cx.dir/build
-.PHONY : Cx/fast
-
-#=============================================================================
-# Target rules for targets named foo
-
-# Build rule for target.
-foo: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 foo
 .PHONY : foo
 
 # fast build rule for target.
 foo/fast:
-	$(MAKE) $(MAKESILENT) -f foo/CMakeFiles/foo.dir/build.make foo/CMakeFiles/foo.dir/build
+	cd /home/wiloon/projects/Cx/cmake-build-debug && $(MAKE) $(MAKESILENT) -f foo/CMakeFiles/foo.dir/build.make foo/CMakeFiles/foo.dir/build
 .PHONY : foo/fast
 
 main.o: main.c.o
@@ -162,7 +151,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cx.dir/build.make CMakeFiles/Cx.dir/main.c.o
+	cd /home/wiloon/projects/Cx/cmake-build-debug && $(MAKE) $(MAKESILENT) -f foo/CMakeFiles/foo.dir/build.make foo/CMakeFiles/foo.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -171,7 +160,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cx.dir/build.make CMakeFiles/Cx.dir/main.c.i
+	cd /home/wiloon/projects/Cx/cmake-build-debug && $(MAKE) $(MAKESILENT) -f foo/CMakeFiles/foo.dir/build.make foo/CMakeFiles/foo.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -180,7 +169,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cx.dir/build.make CMakeFiles/Cx.dir/main.c.s
+	cd /home/wiloon/projects/Cx/cmake-build-debug && $(MAKE) $(MAKESILENT) -f foo/CMakeFiles/foo.dir/build.make foo/CMakeFiles/foo.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -191,7 +180,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Cx"
 	@echo "... foo"
 	@echo "... main.o"
 	@echo "... main.i"
@@ -207,6 +195,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/wiloon/projects/Cx/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

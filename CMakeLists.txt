@@ -8,3 +8,6 @@ add_executable(Cx main.c)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 target_link_libraries(Cx PRIVATE Threads::Threads)
+
+# 引入子目录
+ADD_SUBDIRECTORY(foo)
