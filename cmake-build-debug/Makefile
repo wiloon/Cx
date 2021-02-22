@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/wiloonwy/apps/clion/clion-2020.3.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /home/wiloonwy/apps/clion/clion-2020.3.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /usr/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wiloonwy/workspace/my-projects/Cx
+CMAKE_SOURCE_DIR = /home/wiloon/projects/Cx
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wiloonwy/workspace/my-projects/Cx/cmake-build-debug
+CMAKE_BINARY_DIR = /home/wiloon/projects/Cx/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /home/wiloonwy/workspace/my-projects/Cx/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/wiloonwy/apps/clion/clion-2020.3.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,8 +89,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/wiloonwy/apps/clion/clion-2020.3.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wiloonwy/workspace/my-projects/Cx/cmake-build-debug/CMakeFiles /home/wiloonwy/workspace/my-projects/Cx/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wiloon/projects/Cx/cmake-build-debug/CMakeFiles /home/wiloon/projects/Cx/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wiloonwy/workspace/my-projects/Cx/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wiloon/projects/Cx/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,32 +143,32 @@ Cx/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cx.dir/build.make CMakeFiles/Cx.dir/build
 .PHONY : Cx/fast
 
-hello.o: hello.c.o
+main.o: main.c.o
 
-.PHONY : hello.o
+.PHONY : main.o
 
 # target to build an object file
-hello.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cx.dir/build.make CMakeFiles/Cx.dir/hello.c.o
-.PHONY : hello.c.o
+main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cx.dir/build.make CMakeFiles/Cx.dir/main.c.o
+.PHONY : main.c.o
 
-hello.i: hello.c.i
+main.i: main.c.i
 
-.PHONY : hello.i
+.PHONY : main.i
 
 # target to preprocess a source file
-hello.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cx.dir/build.make CMakeFiles/Cx.dir/hello.c.i
-.PHONY : hello.c.i
+main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cx.dir/build.make CMakeFiles/Cx.dir/main.c.i
+.PHONY : main.c.i
 
-hello.s: hello.c.s
+main.s: main.c.s
 
-.PHONY : hello.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-hello.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cx.dir/build.make CMakeFiles/Cx.dir/hello.c.s
-.PHONY : hello.c.s
+main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Cx.dir/build.make CMakeFiles/Cx.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -179,9 +179,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Cx"
-	@echo "... hello.o"
-	@echo "... hello.i"
-	@echo "... hello.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

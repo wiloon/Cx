@@ -1,3 +1,0 @@
-/home/wiloonwy/workspace/my-projects/Cx/CMakeFiles/rebuild_cache.dir
-/home/wiloonwy/workspace/my-projects/Cx/CMakeFiles/edit_cache.dir
-/home/wiloonwy/workspace/my-projects/Cx/CMakeFiles/Cx.dir

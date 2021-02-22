@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/Cx.dir/hello.c.o  -o Cx 
+/usr/bin/cc -g   CMakeFiles/Cx.dir/main.c.o  -o Cx  -pthread 
