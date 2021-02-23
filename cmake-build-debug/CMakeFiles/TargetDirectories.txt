@@ -1,6 +1,6 @@
-/home/wiloon/projects/Cx/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/wiloon/projects/Cx/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/wiloon/projects/Cx/cmake-build-debug/CMakeFiles/Cx.dir
-/home/wiloon/projects/Cx/cmake-build-debug/foo/CMakeFiles/rebuild_cache.dir
-/home/wiloon/projects/Cx/cmake-build-debug/foo/CMakeFiles/edit_cache.dir
-/home/wiloon/projects/Cx/cmake-build-debug/foo/CMakeFiles/foo.dir
+/home/wiloon/workspace/my-projects/Cx/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/wiloon/workspace/my-projects/Cx/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/wiloon/workspace/my-projects/Cx/cmake-build-debug/CMakeFiles/Cx.dir
+/home/wiloon/workspace/my-projects/Cx/cmake-build-debug/foo/CMakeFiles/rebuild_cache.dir
+/home/wiloon/workspace/my-projects/Cx/cmake-build-debug/foo/CMakeFiles/edit_cache.dir
+/home/wiloon/workspace/my-projects/Cx/cmake-build-debug/foo/CMakeFiles/foo.dir

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/wiloon/projects/Cx/main.c
+/home/wiloon/workspace/my-projects/Cx/main.c
 pthread.h
 -
 stdlib.h

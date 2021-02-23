@@ -23,6 +23,8 @@ void printids(const char *s) {
 
 void *thr_fn(void *arg) {
     printids("new thread: ");
+    sleep(3);
+    printids("new thread: end");
     return ((void *) 0);
 }
 
@@ -37,6 +39,6 @@ int main(void) {
                strerror(err)
         );
     printids("main thread:");
-    sleep(1);
+    sleep(5);
     exit(0);
 }
