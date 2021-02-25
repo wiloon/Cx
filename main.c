@@ -1,12 +1,10 @@
 #include <pthread.h>
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
 
 pthread_t ntid;
-
 
 void printids(const char *s) {
 
@@ -22,15 +20,15 @@ void printids(const char *s) {
 }
 
 void *thr_fn(void *arg) {
-    printids("new thread: ");
-    sleep(3);
-    printids("new thread: end");
+    for(int i=0;i<1000;i++){
+        printids("loop: ");
+        sleep(3);
+    }
+    printids("loop end: ");
     return ((void *) 0);
 }
 
-
 int main(void) {
-
     int err;
 
     err = pthread_create(&ntid, NULL, thr_fn, NULL);
@@ -39,6 +37,6 @@ int main(void) {
                strerror(err)
         );
     printids("main thread:");
-    sleep(5);
+    sleep(500);
     exit(0);
 }
