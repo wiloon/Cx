@@ -11,3 +11,4 @@ target_link_libraries(Cx PRIVATE Threads::Threads)
 
 # 引入子目录
 ADD_SUBDIRECTORY(foo)
+ADD_SUBDIRECTORY(forkx)
