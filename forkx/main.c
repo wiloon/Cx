@@ -10,6 +10,8 @@
 
 int main() {
     pid_t fPid; //fPid表示fork函数返回的值
+    fPid = -1;
+    printf("fPid: %d\n", fPid);
     int count = 0;
     fPid = fork();
     if (fPid < 0)
