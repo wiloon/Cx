@@ -9,19 +9,17 @@ pthread_t ntid;
 void printIds(const char *s) {
 
     pid_t pid;
-
-    pthread_t tid;
-
     pid = getpid();
+    pthread_t threadId;
+    threadId = pthread_self();
 
-    tid = pthread_self();
-    printf("%s pid %u tid %u (0x%x)\n", s,
-           (unsigned int) pid, (unsigned int) tid, (unsigned int) tid);
+    printf("%s pid %u threadId %u (0x%x), ppid: %d\n", s,
+           (unsigned int) pid, (unsigned int) threadId, (unsigned int) threadId, getppid());
 }
 
 void *thr_fn(void *arg) {
-    for(int i=0;i<1000;i++){
-        printIds("loop: ");
+    for (int i = 0; i < 1000; i++) {
+        printIds("child: ");
         sleep(3);
     }
     printIds("loop end: ");
@@ -29,13 +27,14 @@ void *thr_fn(void *arg) {
 }
 
 int main(void) {
+    printIds("main thread start:");
     int err;
-
+    err = pthread_create(&ntid, NULL, thr_fn, NULL);
     err = pthread_create(&ntid, NULL, thr_fn, NULL);
     if (err != 0)
-        printf("can't create thread: %s\n",               strerror(err)        );
+        printf("can't create thread: %s\n", strerror(err));
 
-    printIds("main thread:");
+    printIds("main thread sleep:");
     sleep(500);
     exit(0);
 }
