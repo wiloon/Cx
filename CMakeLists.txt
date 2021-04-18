@@ -9,5 +9,6 @@ add_executable(Cx main.c)
 # 引入子目录
 ADD_SUBDIRECTORY(foo)
 ADD_SUBDIRECTORY(forkx)
+ADD_SUBDIRECTORY(forkx0)
 ADD_SUBDIRECTORY(systeminvoke)
 ADD_SUBDIRECTORY(threadx)

@@ -1,0 +1,1 @@
+add_executable(forkx0 main.c)
