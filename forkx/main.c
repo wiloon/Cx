@@ -22,12 +22,10 @@ int main() {
     else if (fPid == 0) {
         printf("i am the child process, my process id is %d, my fPid is %d, parent process id: %d \n", getpid(), fPid,
                getppid());
-        printf("我是爹的儿子\n");//对某些人来说中文看着更直白。
         count++;
     } else {
         printf("i am the parent process, my process id is %d, my fPid is %d, parent process id: %d \n", getpid(), fPid,
                getppid());
-        printf("我是孩子他爹\n");
         count++;
     }
     printf("统计结果是: %d\n", count);
